@@ -570,6 +570,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         music.jumpUp.play()
     }
 })
+controller.combos.attachCombo("Up", function () {
+    mySprite.setVelocity(0, -100)
+})
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     facingRight = 1
 })
