@@ -571,7 +571,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 controller.combos.attachCombo("Up", function () {
-    mySprite.setVelocity(0, -100)
+    mySprite.setVelocity(0, 10000000000000000)
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     facingRight = 1
@@ -897,6 +897,7 @@ game.splash("Jumping Mateo", "Speedrun Edition")
 level = 1
 intitPlayer()
 setLevel(level, mySprite)
+info.startCountdown(100)
 game.onUpdate(function () {
     if (level == 10) {
         if (mySprite.y > 394) {
@@ -1149,7 +1150,7 @@ f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 
 `)
             effects.blizzard.startScreenEffect()
             mySprite.ay = 300
-        } else if (mySprite.y > 128) {
+        } else if (0 > 128) {
             scene.setBackgroundImage(img`
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
