@@ -897,7 +897,7 @@ game.splash("Jumping Mateo", "Speedrun Edition")
 level = 1
 intitPlayer()
 setLevel(level, mySprite)
-info.startCountdown(100)
+info.startCountdown(60)
 game.onUpdate(function () {
     if (level == 10) {
         if (mySprite.y > 394) {
@@ -1023,7 +1023,7 @@ game.onUpdate(function () {
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 `)
-            effects.blizzard.startScreenEffect()
+            effects.clouds.startScreenEffect()
             mySprite.ay = 300
         } else if (mySprite.y > 256) {
             scene.setBackgroundImage(img`
@@ -1148,7 +1148,7 @@ f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 f 6 6 6 6 6 6 6 
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 
 `)
-            effects.blizzard.startScreenEffect()
+            effects.clouds.startScreenEffect()
             mySprite.ay = 300
         } else if (0 > 128) {
             scene.setBackgroundImage(img`
@@ -1273,7 +1273,7 @@ f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 
 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 
 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 f 6 
 `)
-            effects.blizzard.endScreenEffect()
+            effects.clouds.endScreenEffect()
             mySprite.ay = 150
         } else {
             scene.setBackgroundImage(img`
@@ -1398,7 +1398,7 @@ f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f f 
 `)
-            effects.blizzard.endScreenEffect()
+            effects.clouds.endScreenEffect()
             mySprite.ay = 150
         }
     }
