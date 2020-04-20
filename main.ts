@@ -105,6 +105,24 @@ f f f f f f f f f f f f f f f f
 2 2 2 5 2 2 2 2 2 2 4 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 `, true)
+    scene.setTile(10, img`
+2 2 5 4 2 2 2 2 5 2 2 2 4 2 2 2 
+2 2 2 2 2 2 4 2 2 2 2 5 5 2 5 2 
+4 2 2 2 5 5 2 2 4 5 2 5 5 2 2 2 
+5 2 2 2 5 5 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 2 5 2 2 2 2 2 2 2 2 
+2 2 4 2 2 2 2 2 2 2 2 2 2 2 4 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 4 2 2 2 4 4 2 2 2 2 
+2 2 2 4 4 2 2 2 2 2 4 4 2 5 5 2 
+2 2 2 4 4 2 2 2 5 2 2 2 2 5 5 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+2 5 2 2 4 2 2 2 2 2 2 2 2 2 4 2 
+2 2 2 2 2 2 2 5 2 2 2 2 2 2 2 2 
+2 2 2 2 4 2 2 2 2 2 2 2 5 2 2 2 
+2 2 2 5 2 2 2 2 2 2 4 2 2 2 2 2 
+2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+`, false)
     scene.setTile(8, img`
 1 1 1 1 9 9 9 9 9 9 1 9 9 1 1 1 
 1 1 1 1 1 9 9 9 9 9 9 9 9 9 1 1 
@@ -185,8 +203,8 @@ c a 8 f c c b a f f c b c c c .
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 
-7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 
-e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+7 7 7 7 7 7 3 3 3 7 7 7 3 3 3 7 7 7 7 7 3 3 7 7 7 7 7 7 7 7 7 7 
+e e e e e e 3 3 3 e e e 3 3 3 e e e e e 3 3 e e e e e e e e e e 
 `)
         myTile = scene.getTile(0, 5)
         myTile.place(mySprite)
@@ -206,71 +224,71 @@ e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e
 . . . . . . . . . 7 7 e e e e e 
 . . . . . . . 7 7 e e e e e e e 
 . . . . . 7 7 e e e e e e e e e 
-. . . 7 7 e e e e e e e e e e e 
-7 7 7 e e e e e e e e e e e e e 
-e e e e e e e e e e e e e e e e 
+. . . 7 7 e e 3 3 3 3 3 3 3 3 3 
+7 7 7 e e e e 3 3 3 3 3 3 3 3 3 
+e e e e e e e 3 3 e e e e e e e 
 `)
         myTile = scene.getTile(0, 13)
         myTile.place(mySprite)
     } else if (num == 3) {
         scene.setTileMap(img`
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 
-7 7 7 7 . . 7 7 7 7 . . 7 7 7 7 . . 7 7 7 7 . . 7 7 7 7 . . 7 7 
+a a a a a a e e e e e e e e e e e e e e e e e e e e e e e e e e 
+a a a a a a e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e a a e e e e e e e e e e e e e e e e e e e e e e e e e e 
+. . . . a a . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . a a . . . . . . . . . . . . . . . . . . . . . . . . . . 
+. . . . a a . . . . . . . . . . . . . . . . . . . . . . . . . 1 
+7 7 7 7 a a 7 7 7 7 . . 7 7 7 7 . . 7 7 7 7 . . 7 7 7 7 . . 7 7 
 e e e e 3 3 e e e e 3 3 e e e e 3 3 e e e e 3 3 e e e e 3 3 e e 
 `)
         myTile = scene.getTile(0, 5)
         myTile.place(mySprite)
     } else if (num == 4) {
         scene.setTileMap(img`
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . 2 2 . . . . . . 2 2 . . . . . . 2 2 2 . . 2 2 2 . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 
-7 7 7 7 . . . . 7 7 7 7 . . . . 7 7 7 7 . . . . . . . . . . 7 7 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a 2 2 a a a a a a 2 2 a a a a a a 2 2 2 a a 2 2 2 a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 1 
+7 7 7 7 a a a a 7 7 7 7 a a a a 7 7 7 7 a a a a a a a a a a 7 7 
 e e e e 3 3 3 3 e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
 `)
         myTile = scene.getTile(0, 5)
         myTile.place(mySprite)
     } else if (num == 5) {
         scene.setTileMap(img`
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 7 7 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . 2 2 . e e 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e 
-. . . . . . . . . . . . . . . . . . . . . . . . 2 2 . . . . e e 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e 
-. . . . . . . . . . . . . . . . . . . . . 2 2 . . . . . . . e e 
-. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . e e 
-. . . . . . . . . . . . . . . . 7 7 7 7 . . . . . . . . . . e e 
-. . . . . . . . . . . . . . . . e e e e 3 3 3 3 3 3 3 3 3 3 e e 
-. . . . . . . . . . . . . 2 2 . e e e e 3 3 3 3 3 3 3 3 3 3 e e 
-. . . . . . . . . . . . . . . . e e e e 3 3 3 3 3 3 3 3 3 3 e e 
-. . . . . . . . 7 7 7 7 . . . . e e e e 3 3 3 3 3 3 3 3 3 3 e e 
-. . . . . . . . e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
-. . . . . 2 2 . e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
-. . . . . . . . e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
-7 7 7 7 . . . . e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e e 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 1 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a 7 7 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a e e 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a 2 2 a e e 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a e e 
+a a a a a a a a a a a a a a a a a a a a a a a a 2 2 a a a a e e 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a e e 
+a a a a a a a a a a a a a a a a a a a a a 2 2 a a a a a a a e e 
+a a a a a a a a a a a a a a a a a a a a a a a a a a a a a a e e 
+a a a a a a a a a a a a a a a a 7 7 7 7 a a a a a a a a a a e e 
+a a a a a a a a a a a a a a a a e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+a a a a a a a a a a a a a 2 2 a e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+a a a a a a a a a a a a a a a a e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+a a a a a a a a 7 7 7 7 a a a a e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+a a a a a a a a e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+a a a a a 2 2 a e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+a a a a a a a a e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
+7 7 7 7 a a a a e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
 e e e e 3 3 3 3 e e e e 3 3 3 3 e e e e 3 3 3 3 3 3 3 3 3 3 e e 
 `)
         myTile = scene.getTile(0, 29)
